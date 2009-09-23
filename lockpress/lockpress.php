@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: LockPress
-Plugin URI: http://www.wordpress.org/extend/plugins/
+Plugin URI: http://twoenough.com/products/lockpress
 Description: Monetize your visitors - get money from people reading your posts
 Author: twoenough.com
 Version: 1.0

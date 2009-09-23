@@ -43,6 +43,19 @@ function lockpressMainPage(){
 	<?php
 }
 function lockpressMainPageNoKey(){
+
+/*
+
+Hello there!
+
+The activation protection in this plugin is not intended to limit you in using it in any way - we just try to keep a list of 
+people who use our plugin. So please - take one minute of your time activating the plugin on our site instead taking same minute
+trying to figure out how to avoid activation :)
+
+
+*/
+
+
 	$msg='';
 	if(isset($_GET['lockpressSecureKey'])){
 		update_option('lockpress_secureKey',$_GET['lockpressSecureKey']);

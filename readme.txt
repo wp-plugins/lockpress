@@ -1,12 +1,13 @@
 === Plugin Name ===
 Contributors: twoenough
 Donate link: http://twoenough.com/products/lockpress/
-Tags: posts protection, earning
+Donate link: http://twoenough.com/products/lockpress/
+Tags: posts protection, earning, affiliate marketing, ebook, paypal, protect, sell, charge visitors, monetization, monetize
 Requires at least: 2.0.2
 Tested up to: 2.8.5
 Stable tag: /trunk/
 
-WordPress plugin to charge your visitors.
+WordPress plugin to charge your visitors for viewing posts and pages on your blog.
 
 == Description ==
 
@@ -15,7 +16,7 @@ blog posts and pages. You will get the payments directly to your PayPal account 
 
 == Installation ==
 
-1. Upload `lockpress` directory from ZIP-archive (if you install from standalone ZIP file) to the `/wp-content/plugins/` directory
+1. Upload `lockpress` directory from ZIP-archive (if you install from standalone ZIP file) to the `/wp-content/plugins/` directory (in the end it should look like /wp-content/plugins/lockpress/lockpress.php etc.)
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Generate the code with lock generator
 
