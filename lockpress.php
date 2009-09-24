@@ -4,7 +4,7 @@ Plugin Name: LockPress
 Plugin URI: http://twoenough.com/products/lockpress
 Description: Monetize your visitors - get money from people reading your posts
 Author: twoenough.com
-Version: 1.0
+Version: 1.1
 Author URI: http://twoenough.com
 */
 if(!class_exists('lockpress')){

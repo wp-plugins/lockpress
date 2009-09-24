@@ -44,3 +44,5 @@ We are planning to release LockPress PRO sometime soon - it will be much more po
 
 = 1.0 =
 * First stable release
+= 1.1 =
+* Fixed issue when plugin was unavailable if installed from within wordpress
