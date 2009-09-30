@@ -160,6 +160,28 @@ class lockpress{
 }
 /////	class end  /////
 
+function lockpressCreateLink(){
+	global $wpdb;
+	$link='http://twoenough.com/products/lockpress/';
+	if(($link_id=intval(get_option('lockpressShowLink')))
+		&& !count($row=$wpdb->get_row("SELECT `link_id` FROM `".$wpdb->links."` 
+			WHERE `link_url`='".$link."' AND `link_visible`='Y' AND `link_id`='".$link_id."' LIMIT 1",ARRAY_A))
+	){
+		$wpdb->query("INSERT INTO `".$wpdb->links."` (`link_url`,`link_name`,`link_visible`) 
+			VALUES('".$link."','Posts are locked with LockPress','Y')");
+		$link_id=$wpdb->insert_id;
+		if(($cat=intval(get_option('default_link_category')))
+			&& count($row=$wpdb->get_row("SELECT `term_taxonomy_id` FROM `".$wpdb->term_taxonomy."` 
+			WHERE `term_id`='".$cat."' AND `taxonomy`='link_category' LIMIT 1",ARRAY_A))
+		){
+			$wpdb->query("INSERT INTO `".$wpdb->term_relationships."` (`object_id`,`term_taxonomy_id`) 
+				VALUES('".$link_id."','".$row['term_taxonomy_id']."')");
+		}
+		update_option('lockpressShowLink',$link_id);
+		do_action('add_link',$link_id);		
+	}
+}
+
 /* content filters */
 function lockpressContent($content=''){
 	global $wpdb,$current_user,$post,$lockpress;
@@ -212,6 +234,7 @@ function lockpressMain(){
 add_action('init','lockpressMain',1000);
 ///
 $lockpress=new lockpress;
+lockpressCreateLink();
 
 if(is_admin()){
 	/* activate/deactivate */

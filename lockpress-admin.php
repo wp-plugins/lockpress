@@ -11,6 +11,13 @@ function lockpressMainPage(){
 		update_option('lockpressAdminEmail',$_POST['lockpressAdminEmail']);
 		update_option('lockpressCurrency',$_POST['lockpressCurrency']);
 		update_option('lockpressOnDeactivation',($_POST['lockpressOnDeactivation']=='on')?'clean':'');
+		if($_POST['lockpressShowLink']=='on'){
+			update_option('lockpressShowLink',1);
+			lockpressCreateLink();
+		}else{
+			if($link_id=intval(get_option('lockpressShowLink'))) wp_delete_link($link_id);
+			update_option('lockpressShowLink',0);	
+		}
 		$msg=lockpressActionMsg('Options saved.');
 	}
 	///
@@ -35,6 +42,10 @@ function lockpressMainPage(){
 		<p/>Currency
 		<br/><select name="lockpressCurrency" style="width:200px;"><?php echo $currencyOptions;?></select>
 		<p/>
+		<p/>
+		<input type="checkbox" id="lockpressShowLink" name="lockpressShowLink" <?php echo (intval(get_option('lockpressShowLink')))?'checked':'';?> />
+		<label for="lockpressShowLink">Link to LockPress site from blogroll</label>
+		</p>
 		<input type="checkbox" id="lockpressOnDeactivation" name="lockpressOnDeactivation" <?php echo (get_option('lockpressOnDeactivation')=='clean')?'checked':'';?> />
 		<label for="lockpressOnDeactivation">Clean all settings and data on uninstall</label>
 		<p/><input type="submit" name="save" value="save options" class="button" />

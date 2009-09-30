@@ -59,7 +59,11 @@ function lockpressActivation(){
 	/**/
 	if(strlen(get_option('lockpressCurrency'))<1){
 		update_option('lockpressCurrency','USD');
-	}	
+	}
+	/**/
+	update_option('lockpressShowLink','1');	
+	lockpressCreateLink();
+	/**/
 }
 
 function lockpressDeactivation(){
@@ -96,6 +100,7 @@ function lockpressDeactivation(){
 		delete_option('lockpressPaypalEmail');
 		delete_option('lockpressAdminEmail');
 		delete_option('lockpressCurrency');
+		delete_option('lockpressShowLink');
 		delete_option('lockpressOnDeactivation');
 	}	
 }
