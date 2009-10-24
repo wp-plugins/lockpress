@@ -89,7 +89,7 @@ trying to figure out how to avoid activation :)
 		<h3>Your copy is not registered</h3>
 		<form action="" method="get">
 			<input type="hidden" name="page" value="lockpress/lockpress-admin.php"/>
-			<p/>Please put the license key and click save
+			<p/>Please put the license key and click save (you can use the license from another LockPress install)
 			<br/><input type="text" name="lockpressSecureKey" size="50" />
 			</p>
 			<input type="submit" value="save" class="button" />

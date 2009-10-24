@@ -78,7 +78,10 @@ class lockpress{
 	}
 	/* Check access */
 	function isSecureKey(){
+	
+		return strlen(get_option('lockpress_secureKey')) == 128;
 		return md5($this->siteUrl)==get_option('lockpress_secureKey');
+		
 	}
 	function isGroupOpen(){
 		global $wpdb,$current_user;

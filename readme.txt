@@ -48,3 +48,5 @@ We are planning to release LockPress PRO sometime soon - it will be much more po
 * Fixed issue when plugin was unavailable if installed from within wordpress
 = 1.2 =
 * Added optional backlink feature
+= 1.3 =
+* Multiple domains registration feature
