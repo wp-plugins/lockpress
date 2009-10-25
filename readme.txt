@@ -4,7 +4,7 @@ Donate link: http://twoenough.com/products/lockpress/
 Donate link: http://twoenough.com/products/lockpress/
 Tags: posts protection, earning, affiliate marketing, ebook, paypal, protect, sell, charge visitors, monetization, monetize
 Requires at least: 2.0.2
-Tested up to: 2.8.5
+Tested up to: 2.9
 Stable tag: /trunk/
 
 WordPress plugin to charge your visitors for viewing posts and pages on your blog.
@@ -41,12 +41,11 @@ Yes, this plugin is absolutely free and open-sourced.
 We are planning to release LockPress PRO sometime soon - it will be much more powerful.
 
 == Changelog ==
-
-= 1.0 =
-* First stable release
-= 1.1 =
-* Fixed issue when plugin was unavailable if installed from within wordpress
-= 1.2 =
-* Added optional backlink feature
 = 1.3 =
 * Multiple domains registration feature
+= 1.2 =
+* Added optional backlink feature
+= 1.1 =
+* Fixed issue when plugin was unavailable if installed from within wordpress
+= 1.0 =
+* First stable release
