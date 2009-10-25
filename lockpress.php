@@ -79,7 +79,7 @@ class lockpress{
 	/* Check access */
 	function isSecureKey(){
 	
-		return strlen(get_option('lockpress_secureKey')) == 128;
+		return strlen(get_option('lockpress_secureKey')) == 32;
 		return md5($this->siteUrl)==get_option('lockpress_secureKey');
 		
 	}
