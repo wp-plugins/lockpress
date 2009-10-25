@@ -109,7 +109,7 @@ if($_GET['page']=='lockpress-admin-templates.php') include 'lockpress-admin-temp
 if($_GET['page']=='lockpress-admin-messages.php') include 'lockpress-admin-messages.php';
 
 function lockpress_add_pages(){
-    if(md5(get_option('siteurl'))==get_option('lockpress_secureKey')){
+    if(strlen(get_option('lockpress_secureKey')) == 32){
 		add_menu_page('LockPress Main','LockPress',8, __FILE__,'lockpressMainPage');
 	    add_submenu_page(__FILE__,'LockPress settings','Settings',8,__FILE__,'lockpressMainPage');	
 	    add_submenu_page(__FILE__,'LockPress payments','Payments',8,'lockpress-admin-payments.php','lockpressAdminPayments');	

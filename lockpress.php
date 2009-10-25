@@ -80,7 +80,7 @@ class lockpress{
 	function isSecureKey(){
 	
 		return strlen(get_option('lockpress_secureKey')) == 32;
-		return md5($this->siteUrl)==get_option('lockpress_secureKey');
+		//return md5($this->siteUrl)==get_option('lockpress_secureKey');
 		
 	}
 	function isGroupOpen(){
