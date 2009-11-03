@@ -4,7 +4,7 @@ Plugin Name: LockPress
 Plugin URI: http://twoenough.com/products/lockpress
 Description: Monetize your visitors - get money from people reading your posts
 Author: twoenough.com
-Version: 1.3.1
+Version: 1.3.2
 Author URI: http://twoenough.com
 */
 if(!class_exists('lockpress')){
@@ -38,7 +38,9 @@ class lockpress{
 			require_once 'lockpress-payment.php';
 			$this->content=$content;
 			$this->sellTag=$eregArr[0];
-			$this->price=(eregi("price=\"([0-9]+)\"",$eregArr[0],$eregArr2))?$eregArr2[1]:0;
+			$this->price=(eregi("price=\"([0-9,\.]+)\"",$eregArr[0],$eregArr2))?$eregArr2[1]:0;
+			$this->price = preg_replace("/,/", ".", $this->price);
+			
 			if(eregi("recurring=\"([0-9]+)(D|W|M|Y)\"",$eregArr[0],$eregArr2)){
 				$this->recurring=$eregArr2[1];
 				$this->period=$eregArr2[2];

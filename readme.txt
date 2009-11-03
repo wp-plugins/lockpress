@@ -41,6 +41,8 @@ Yes, this plugin is absolutely free and open-sourced.
 We are planning to release LockPress PRO sometime soon - it will be much more powerful.
 
 == Changelog ==
+= 1.3.2 =
+* Price with floating point fix
 = 1.3.1 =
 * Multiple domains registration feature
 = 1.2 =
